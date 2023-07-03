@@ -4,31 +4,72 @@ import os
 
 
 
-morning_routine_1 =  "first morning"
-morning_routine_2 = "second morning"
-morning_routine_3 = "third morning"
-morRouTime1 = 600
-morRouTime2 = 600
-morRouTime3 = 600
+morning_routine_1 =  "Toilet and Make Coffee"
+morning_routine_2 = "Music and Reflect"
+morning_routine_3 = "Read Quran"
+morning_routine_4 = "Exercise and Visualize"
+morRouTime1 = 3
+morRouTime2 = 3
+morRouTime3 = 3
+morRouTime4 = 3
 
-night_routine_1 =  "first night"
-night_routine_2 = "second night"
-night_routine_3 = "third night"
-nightRouTime1 = 600
-nightRouTime2 = 600
-nightRouTime3 = 600
+night_routine_1 = "Read Quran"
+night_routine_2 = "Meditate"
+night_routine_3 = "Observe your mind. Detachment"
+nightRouTime1 = 3
+nightRouTime2 = 3
+nightRouTime3 = 3
 
 
  
 # MORNING--------------------------------------------------------------------------------------------------------
 def morning_countdown_1():
-    morRouTime1 = 3
-    while morRouTime1 > 0:
-        timer = datetime.timedelta(seconds = morRouTime1)
+    total_seconds = morRouTime1
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
         print(morning_routine_1+"   ", timer, end="\r")
         time.sleep(1)
-        morRouTime1 -= 1
+        total_seconds -= 1
     print(morning_routine_1 + "  is done  ")
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    #os.system('say "your program has finished"')
+
+def morning_countdown_2():
+    total_seconds = morRouTime2
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
+        print(morning_routine_2+"   ", timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+    print(morning_routine_2 + "  is done  ")
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    #os.system('say "your program has finished"')
+
+def morning_countdown_3():
+    total_seconds = morRouTime3
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
+        print(morning_routine_3+"   ", timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+    print(morning_routine_3 + "  is done  ")
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    #os.system('say "your program has finished"')
+
+def morning_countdown_4():
+    total_seconds = morRouTime4
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
+        print(morning_routine_4+"   ", timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+    print(morning_routine_4 + "  is done  ")
     os.system('afplay /System/Library/Sounds/Glass.aiff')
     os.system('afplay /System/Library/Sounds/Glass.aiff')
     os.system('afplay /System/Library/Sounds/Glass.aiff')
@@ -36,6 +77,44 @@ def morning_countdown_1():
 
 
 # NIGHT--------------------------------------------------------------------------------------------------------
+def night_countdown_1():
+    total_seconds = nightRouTime1
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
+        print(night_routine_1+"   ", timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+    print(night_routine_1 + "  is done  ")
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    #os.system('say "your program has finished"')
+
+def night_countdown_2():
+    total_seconds = nightRouTime2
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
+        print(night_routine_2+"   ", timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+    print(night_routine_2 + "  is done  ")
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    #os.system('say "your program has finished"')
+
+def night_countdown_3():
+    total_seconds = nightRouTime3
+    while total_seconds > 0:
+        timer = datetime.timedelta(seconds = total_seconds)
+        print(night_routine_3+"   ", timer, end="\r")
+        time.sleep(1)
+        total_seconds -= 1
+    print(night_routine_3 + "  is done  ")
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    os.system('afplay /System/Library/Sounds/Glass.aiff')
+    #os.system('say "your program has finished"')
 
 #MAIN --------------------------------------------------------------------------------------------------------
 def main():
@@ -45,6 +124,7 @@ def main():
             morning_countdown_1()
             morning_countdown_2()
             morning_countdown_3()
+            morning_countdown_4()
             print ("Have a good day")
             break
         elif when == "night":
