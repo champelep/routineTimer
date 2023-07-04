@@ -16,11 +16,9 @@ morRouTime4 = 3
 night_routine_1 = "Read Quran"
 night_routine_2 = "Meditate"
 night_routine_3 = "Observe your mind. Detachment"
-night_routine_4 = "Test night routine 4"
 nightRouTime1 = 3
 nightRouTime2 = 3
 nightRouTime3 = 3
-nightRouTime4 = 3
 
 
 class RoutineWindow(tk.Tk):
@@ -28,6 +26,7 @@ class RoutineWindow(tk.Tk):
         super().__init__()
         self.title("Morning and Night Routines")
         self.configure(bg="black")
+        self.geometry("200x200")
         self.label = tk.Label(self, text="Select Routine", fg="white", bg="black", font=("Arial", 20, "bold"))
         self.label.pack(pady=10)
         self.morning_button = tk.Button(self, text="Morning", command=self.start_morning_routine, font=("Arial", 16))
@@ -70,7 +69,6 @@ class RoutineWindow(tk.Tk):
         self.countdown(night_routine_1, nightRouTime1)
         self.countdown(night_routine_2, nightRouTime2)
         self.countdown(night_routine_3, nightRouTime3)
-        self.countdown(night_routine_4, nightRouTime4)
 
     def countdown(self, routine, duration):
         total_seconds = duration
